@@ -1,15 +1,13 @@
 import { Link } from 'react-router-dom';
 
-export default function Campers() {
+export default function Reports() {
     return (
         <div className='h-screen flex flex-col items-center justify-center gap-6 mt-auto'>
             <div className='flex gap-50 mt-auto'>
                 <Link to="/"><button type="button" className='bg-gray-500 px-8 py-4 rounded-sm'>Home</button></Link>
-                <Link to="/reports"><button type="button" className='bg-gray-500 px-8 py-4 rounded-sm'>Reports</button></Link>
-                <input type="text" placeholder='Search' className='bg-gray-500/25 px-4 py-2 rounded-sm' />
+                <Link to="/campers"><button type="button" className='bg-gray-500 px-8 py-4 rounded-sm'>Campers</button></Link>
             </div>
 
         </div>
     )
 }
-
