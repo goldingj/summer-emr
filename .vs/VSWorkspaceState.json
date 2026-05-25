@@ -1,8 +1,13 @@
 {
   "ExpandedNodes": [
     "",
+    "\\server",
+    "\\server\\Controllers",
+    "\\server\\Data",
+    "\\server\\Models",
     "\\src",
     "\\src\\pages"
   ],
+  "SelectedNode": "\\server\\Controllers\\CampersController.cs",
   "PreviewInSolutionExplorer": false
 }

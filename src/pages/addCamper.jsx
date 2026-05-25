@@ -1,4 +1,28 @@
+import { useState } from "react";
+
 export default function AddCamper() {
+
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
+
+    const handleSubmit = async () => {
+
+        const camperData = {
+            firstName,
+            lastName
+        };
+
+        const response = await fetch("http://localhost:5227/api/campers", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(camperData)
+        });
+        const data = await response.json();
+        console.log(data);
+    };
+
     return (
         <div className="min-h-full">
             <nav className="bg-gray-800">
@@ -42,11 +66,104 @@ export default function AddCamper() {
 
 
 
-            <main>
+            <main className="bg-gray-900">
                 <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+                    
+
+                    <form>
+                        <div className="space-y-12">
+                            <div className="border-b border-white/10 pb-12">
+                                <label htmlFor="firstName" className="block text-sm/6 font-medium text-white">
+                                    First Name
+                                </label>
+                                <input
+                                    type="text"
+                                    name="firstName"
+                                    id="firstName"
+                                    placeholder="Jane"
+                                    value={firstName}
+                                    onChange={(e) => setFirstName(e.target.value)}
+                                    className="mt-2 block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+
+
+                                <label htmlFor="lastName" className="block text-sm/6 font-medium text-white">
+                                    Last Name
+                                </label>
+                                <input
+                                    type="text"
+                                    name="lastName"
+                                    id="lastName"
+                                    placeholder="Smith"
+                                    value={lastName}
+                                    onChange={(e) => setLastName(e.target.value)}
+                                    className="mt-2 block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+
+                                <label htmlFor="dob" className="block text-sm/6 font-medium text-white">Date of Birth</label>
+                                    <input type="date"
+                                        name="dob"
+                                    id="dob"
+                                        
+                                    className="mt-2 block  rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+
+                                <label htmlFor="gender" className="block text-sm/6 font-medium text-white">Gender</label>
+                                    <select
+                                        name="gender"
+                                        id="gender"
+                                    className="mt-2 block  rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6">
+                                    <option className="bg-gray-900" value="male">Male</option>
+                                        <option className="bg-gray-900" value="female">Female</option>
+                                        <option className="bg-gray-900" value="other">Other</option>
+                                </select>
+
+                                <label htmlFor="parentFirst" className="block text-sm/6 font-medium text-white">
+                                    Parent First Name
+                                </label>
+                                <input
+                                    type="text"
+                                    name="parentFirst"
+                                    id="parentFirst"
+                                    placeholder="John"
+                                    className="mt-2 block w-1/2 rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+
+                                <label htmlFor="parentLast" className="block text-sm/6 font-medium text-white">
+                                    Parent Last Name
+                                </label>
+                                <input
+                                    type="text"
+                                    name="parentLast"
+                                    id="parentLast"
+                                    placeholder="Smith"
+                                    className="mt-2 block w-1/2 rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+
+                                <label htmlFor="phone" className="block text-sm/6 font-medium text-white">
+                                    Phone
+                                </label>
+                                <input
+                                    type="text"
+                                    name="phone"
+                                    id="phone"
+                                    placeholder="(123) 456-7890"
+                                    className="mt-2 block rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+                            </div>
+                                </div>
+
+                        <div className="mt-6 flex items-center justify-end gap-x-6">
+                            <button type="button" className="text-sm/6 font-semibold text-white">
+                                Cancel
+                            </button>
+                            <button onClick={handleSubmit}
+                                type="submit"
+                                className="rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+                            >
+                                Save
+                            </button>
+                        </div>
+                    </form>
+                    
 
                 </div>
             </main>
-        </div>
+                </div>
+       
     )
 }
