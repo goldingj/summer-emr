@@ -11,7 +11,11 @@ namespace server.Models
         public required string FirstName { get; set; }
         [Column("last_name")]
         public required string LastName { get; set; }
+        [Column("gender")]
+        public required int GenderId { get; set; }
         [Column("date_of_birth")]
-        public DateTime DateOfBirth { get; set; }
+        public required DateOnly DateOfBirth { get; set; }
+        [Column("bunk")]
+        public required int BunkId { get; set; }
     }
 }

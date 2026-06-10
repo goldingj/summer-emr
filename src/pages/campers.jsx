@@ -1,6 +1,16 @@
-
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 export default function Campers() {
+
+    const [campers, setCampers] = useState([]);
+
+    useEffect(() => {
+        fetch("http://localhost:5227/api/campers")
+            .then(response => response.json())
+            .then(data => setCampers(data))
+            .catch(error => console.error("Error fetching campers:", error));
+    }, []);
+
     return (
         <div className="min-h-full">
             <nav className="bg-gray-800">
@@ -47,9 +57,13 @@ export default function Campers() {
 
 
 
-            <main>
-                <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-
+            <main className="bg-gray-800 h-screen">
+                <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 text-white">
+                    {campers.map((c) => (
+                        <div key={c.camperId}>
+                            <Link to={`/campers/${c.camperId}`}>{c.lastName}, {c.firstName}</Link>
+                        </div>
+                    ))}
                 </div>
             </main>
         </div>

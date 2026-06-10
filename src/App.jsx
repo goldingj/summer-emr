@@ -6,6 +6,8 @@ import Reports from './pages/reports'
 import AddCamper from './pages/addCamper'
 import AddMedication from './pages/addMedication'
 import MAR from './pages/mar'
+import CamperProfile from './pages/camperProfile'
+import EditCamper from './pages/editCamper'
 
 function App() {
 
@@ -18,6 +20,8 @@ function App() {
                 <Route path="/addCamper" element={<AddCamper />} />
                 <Route path="/addMedication" element={<AddMedication />} />
                 <Route path="/mar" element={<MAR />} />
+                <Route path="/campers/:id" element={<CamperProfile />} />
+                <Route path="/editCamper/:id" element={<EditCamper />} />
             </Routes>
         </BrowserRouter>
     )

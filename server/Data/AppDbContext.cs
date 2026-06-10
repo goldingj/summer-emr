@@ -10,5 +10,9 @@ namespace server.Data
         }
 
         public DbSet<Camper> Campers { get; set; }
+        public DbSet<Parent> Parents { get; set; }
+        public DbSet<CamperParents> CamperParents { get; set; }
+        public DbSet<Gender> Genders { get; set; }
+        public DbSet<Bunks> Bunks { get; set; }
     }
 }

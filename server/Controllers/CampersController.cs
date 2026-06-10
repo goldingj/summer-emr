@@ -17,8 +17,19 @@ namespace server.Controllers
         [HttpGet]
         public IActionResult GetCampers()
         {
-            var campers = _context.Campers.OrderBy(c => c.lastName).ThenBy(c => c.firstName).ToList();
+            var campers = _context.Campers.OrderBy(c => c.LastName).ThenBy(c => c.FirstName).ToList();
             return Ok(campers);
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult GetCamperById(int id)
+        {
+            var camper = _context.Campers.FirstOrDefault(c => c.CamperId == id);
+            if (camper == null)
+            {
+                return NotFound();
+            }
+            return Ok(camper);
         }
 
         [HttpPost]
@@ -28,6 +39,37 @@ namespace server.Controllers
             _context.SaveChanges();
 
             return Ok(camper);
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult UpdateCamper(int id, EditCamperDTO updatedInfo)
+        {
+            var camper = _context.Campers.FirstOrDefault(c => c.CamperId == id);
+            if (camper == null)
+            {
+                return NotFound();
+            }
+            camper.FirstName = updatedInfo.FirstName;
+            camper.LastName = updatedInfo.LastName;
+            camper.DateOfBirth = updatedInfo.DateOfBirth;
+            camper.GenderId = updatedInfo.GenderId;
+            camper.BunkId = updatedInfo.BunkId;
+            var link = _context.CamperParents.FirstOrDefault(cp => cp.CamperId == id);
+
+            if (link != null)
+            {
+                var parent = _context.Parents.FirstOrDefault(p => p.ParentId == link.ParentId);
+                if (parent != null)
+                {
+                    parent.ParentFirstName = updatedInfo.FirstName;
+                    parent.ParentLastName = updatedInfo.LastName;
+                    parent.PhoneNumber = updatedInfo.PhoneNumber;
+                }
+            }
+
+            _context.SaveChanges();
+
+            return Ok();
         }
     }
 }
