@@ -35,13 +35,27 @@ export default function EditCamper() {
                 setFirstName(data.firstName);
                 setLastName(data.lastName);
                 setDateOfBirth(data.dateOfBirth?.split("T")[0]);
+                /*setGenderId(data.genderId);
+                setBunks(data.bunkId);*/
+
+                setGenderId(
+                    data.genderId ??
+                    data.gender?.genderId ??
+                    ""
+                );
+
+                setBunkId(
+                    data.bunkId ??
+                    data.bunk?.bunkId ??
+                    ""
+                );
             });
 
         fetch(`http://localhost:5227/api/CamperParent/camper/${id}`)
             .then(response => response.json())
             .then(data => {
                 setParentFirstName(data.parentFirstName);
-                setParentLastName(data.parentLastName);20
+                setParentLastName(data.parentLastName);
                 setPhoneNumber(data.phoneNumber);
             });
         fetch("http://localhost:5227/api/genders")
@@ -51,7 +65,10 @@ export default function EditCamper() {
                 }
                 return response.json();
             })
-            .then(data => { setGenders(data); })
+            .then(data => {
+                const list = Array.isArray(data) ? data : data.data;
+                setGenders(list || []);
+            })
             .catch(error => { console.error(error) });
 
         fetch("http://localhost:5227/api/bunks")
@@ -61,7 +78,10 @@ export default function EditCamper() {
                 }
                 return response.json();
             })
-            .then(data => { setBunks(data); })
+            .then(data => {
+                const list = Array.isArray(data) ? data : data.data;
+                setBunks(list || []);
+            })
             .catch(error => { console.error(error) });
 
             
@@ -155,7 +175,7 @@ export default function EditCamper() {
                                     onChange={(e) => setGenderId(e.target.value)}
                                     className="mt-2 block  rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6">
                                     <option value="">Select Gender</option>
-                                    {genders.map((gender) => (
+                                    {Array.isArray(genders) && genders.map((gender) => (
                                         <option className="text-gray-900"
                                             key={gender.genderId}
                                             value={gender.genderId}>
@@ -171,7 +191,7 @@ export default function EditCamper() {
                                     onChange={(e) => setBunkId(e.target.value)}
                                     className="mt-2 block  rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6">
                                     <option value="">Select Bunk</option>
-                                    {bunks.map((bunk) => (
+                                    {Array.isArray(bunks) && bunks.map((bunk) => (
                                         <option className="text-gray-900"
                                             key={bunk.bunkId}
                                             value={bunk.bunkId}>

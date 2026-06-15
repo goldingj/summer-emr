@@ -18,7 +18,7 @@ function App() {
                 <Route path="/campers" element={<Campers />} />
                 <Route path="/reports" element={<Reports />} />
                 <Route path="/addCamper" element={<AddCamper />} />
-                <Route path="/addMedication" element={<AddMedication />} />
+                <Route path="/addMedication/:camperId" element={<AddMedication />} />
                 <Route path="/mar" element={<MAR />} />
                 <Route path="/campers/:id" element={<CamperProfile />} />
                 <Route path="/editCamper/:id" element={<EditCamper />} />
