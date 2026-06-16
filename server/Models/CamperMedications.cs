@@ -7,6 +7,7 @@ namespace server.Models
     public class CamperMedications
     {
         public Medications Medication { get; set; }
+        public Camper Camper { get; set; }
         [Key]
         [Column("camper_medication_id")]
         public int CamperMedicationId { get; set; }

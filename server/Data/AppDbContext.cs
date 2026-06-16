@@ -16,5 +16,6 @@ namespace server.Data
         public DbSet<Bunks> Bunks { get; set; }
         public DbSet<Medications> Medications { get; set; }
         public DbSet<CamperMedications> CamperMedications { get; set; }
+        public DbSet<NursesPosts> NursesPosts { get; set; }
     }
 }

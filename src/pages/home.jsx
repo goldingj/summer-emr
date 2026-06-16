@@ -1,6 +1,38 @@
+import { useEffect, useState } from "react";
 
 
 export default function Home() {
+    const [posts, setPosts] = useState([]);
+    const [message, setMessage] = useState("");
+
+    useEffect(() => {
+        fetch('http://localhost:5227/api/NursePosts')
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data);
+                setPosts(data);
+            });
+    }, []);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const newPost = { message };
+
+        const response = await fetch('http://localhost:5227/api/NursePosts', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newPost)
+        });
+        if (response.ok) {
+            const saved = await response.json();
+            setPosts([saved, ...posts]);
+            setMessage("");
+        }
+    };
+
+
     return (
 
         <div className="min-h-full">
@@ -46,8 +78,24 @@ export default function Home() {
      
 
             <main className="bg-gray-900">
-            <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-
+                <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+                    {posts.map(post => (
+                        <div key={post.nursePostId} className="bg-gray-100 p-3 mb-2 rounded">
+                            <p className="font-semibold">{post.nurseMessage}</p>
+                            <small>{new Date(post.createdAt).toLocaleString()}</small>
+                            
+                        </div>
+                    )) }
+                    <div>
+                        <textarea
+                            className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm text-white shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50"
+                            placeholder="Write your post here"
+                            value={message}
+                            onChange={(e) => setMessage(e.target.value)}
+                        />
+                        <button onClick={handleSubmit}
+                                className="bg-indigo-500 text-white px-4 py-2 rounded">Post</button>
+                    </div>
             </div>
         </main>
         </div>
