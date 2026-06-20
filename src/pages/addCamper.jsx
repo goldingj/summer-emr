@@ -1,21 +1,23 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function AddCamper() {
-
+    const navigate = useNavigate();
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [genders, setGenders] = useState([]);
     const [genderId, setGenderId] = useState("");
     const [bunks, setBunks] = useState([]);
     const [bunkId, setBunkId] = useState("");
+    const [allergies, setAllergies] = useState([]);
+    const [selectedAllergies, setSelectedAllergies] = useState([]);
     const [dateOfBirth, setDateOfBirth] = useState("");
     const [parentFirstName, setParentFirstName] = useState("");
     const [parentLastName, setParentLastName] = useState("");
     const [parentPhone, setParentPhone] = useState("");
 
     useEffect(() => {
-        fetch("http://localhost:5227/api/gender")
+        fetch("http://localhost:5227/api/genders")
             .then(response => response.json())
             .then(data => setGenders(data))
             .catch(error => console.error("Error fetching genders:", error));
@@ -24,7 +26,22 @@ export default function AddCamper() {
             .then(response => response.json())
             .then(data => setBunks(data))
             .catch(error => console.error("Error fetching bunks:", error));
+
+        fetch("http://localhost:5227/api/allergies")
+            .then(response => response.json())
+            .then(data => setAllergies(data))
+            .catch(error => console.error(error));
     }, []);
+
+    const handleAllergySave = (allergyId) => {
+        setSelectedAllergies((previous) => {
+            if (previous.includes(allergyId)) {
+                return previous.filter(id => id !== allergyId);
+            } else {
+                return [...previous, allergyId];
+            }
+        });
+    };
 
         const handleSubmit = async (e) => {
             e.preventDefault();
@@ -32,17 +49,18 @@ export default function AddCamper() {
             const camperData = {
                 firstName,
                 lastName,
-                genderId,
-                bunkId,
+                genderId: Number(genderId),
+                bunkId: Number(bunkId),
                 dateOfBirth
             };
 
             const parentData = {
-                firstName: parentFirstName,
-                lastName: parentLastName,
+                parentFirstName: parentFirstName,
+                parentLastName: parentLastName,
                 phoneNumber: parentPhone
             };
 
+            console.log(camperData);
             const camperResponse = await fetch("http://localhost:5227/api/campers", {
                 method: "POST",
                 headers: {
@@ -51,10 +69,19 @@ export default function AddCamper() {
                 body: JSON.stringify(camperData)
             });
 
+            if (!camperResponse.ok) {
+                const errorText = await camperResponse.text();
+                console.log("CAMPER ERROR RESPONSE: ", errorText);
+                return;
+            }
+
             const savedCamperInfo = await camperResponse.json();
-            console.log(savedCamperInfo);
+            if (!camperResponse.ok) {
+                console.log("Camper failed");
+                return;
+            }
 
-
+            console.log(parentData);
             const parentResponse = await fetch("http://localhost:5227/api/parents", {
                 method: "POST",
                 headers: {
@@ -77,10 +104,21 @@ export default function AddCamper() {
                     camperId: savedCamperInfo.camperId,
                     parentId: savedParentInfo.parentId
                 })
-
-
             });
+
+            await fetch("http://localhost:5227/api/camperallergies", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    camperId: savedCamperInfo.camperId,
+                    allergyIds: selectedAllergies
+                })
+            });
+
+
+            
             alert("Camper added successfully!");
+            navigate("/campers");
         }
         return (
             <div className="min-h-full">
@@ -103,13 +141,7 @@ export default function AddCamper() {
                             </div>
                             <div className="hidden md:block">
                                 <div className="ml-4 flex items-center md:ml-6">
-                                    <button type="button" className="relative rounded-full p-1 text-gray-400 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500">
-                                        <span className="absolute -inset-1.5"></span>
-                                        <span className="sr-only">View notifications</span>
-                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" data-slot="icon" aria-hidden="true" className="size-6">
-                                            <path d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" strokeLinecap="round" strokeLinejoin="round" />
-                                        </svg>
-                                    </button>
+                                    
                                 </div>
                             </div>
 
@@ -175,6 +207,7 @@ export default function AddCamper() {
                                             <option className="text-gray-900"
                                                 key={gender.genderId}
                                                 value={gender.genderId}>
+                                                {gender.genderName}
                                             </option>
                                         ))}
 
@@ -195,6 +228,25 @@ export default function AddCamper() {
                                         ))}
 
                                     </select>
+
+                                    <label className="block text-sm/6 font-medium text-white">
+                                        Allergies
+                                    </label>
+                                    <div className="mt-2 block rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6">
+
+
+                                        <div className="mt-2 space-y-2">
+                                            {allergies.map((allergy) => (
+                                                
+                                                <label key={allergy.allergyId} className="flex items-center gap-2 text-white">
+                                                    <input type="checkbox" value={allergy.allergyId} checked={selectedAllergies.includes(allergy.allergyId)} onChange={() => handleAllergySave(allergy.allergyId)} />
+                                                    {allergy.allergy}
+                                            </label>
+                                                
+                                            ))}
+                                        </div>
+
+                                    </div>
 
                                     <label htmlFor="parentFirst" className="block text-sm/6 font-medium text-white">
                                         Parent First Name

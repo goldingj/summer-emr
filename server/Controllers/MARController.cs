@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using server.Data;
+using server.Models;
 
 namespace server.Controllers
 {
@@ -46,11 +47,31 @@ namespace server.Controllers
                     cm.DosageUnit,
                     cm.Frequency,
                     cm.Instructions,
-                    DueTimes = GetDueTimes(cm.Frequency)
+
+                    LastAdministered = _context.MedicationAdminLog
+                        .Where(log => log.CamperMedicationId == cm.CamperMedicationId)
+                        .OrderByDescending(log => log.AdministeredAt)
+                        .Select(log => (DateTime?)log.AdministeredAt)
+                        .FirstOrDefault()
                 })
                 .ToList();
 
             return Ok(meds);
+        }
+
+        [HttpPost("administer/{camperMedicationId}")]
+        public IActionResult Administer(int camperMedicationId)
+        {
+            var log = new MedicationAdminLog
+            {
+                CamperMedicationId = camperMedicationId,
+                AdministeredAt = DateTime.UtcNow
+            };
+
+            _context.MedicationAdminLog.Add(log);
+            _context.SaveChanges();
+
+            return Ok();
         }
     }
 }

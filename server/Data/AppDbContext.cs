@@ -17,5 +17,22 @@ namespace server.Data
         public DbSet<Medications> Medications { get; set; }
         public DbSet<CamperMedications> CamperMedications { get; set; }
         public DbSet<NursesPosts> NursesPosts { get; set; }
-    }
+        public DbSet<Allergies> Allergies { get; set; }
+        public DbSet<CamperAllergies> CamperAllergies { get; set; }
+        public DbSet<MedicationAdminLog> MedicationAdminLog { get; set; }
+    
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<CamperAllergies>()
+                .HasOne(ca => ca.Camper)
+                .WithMany(c => c.CamperAllergies)
+                .HasForeignKey(ca => ca.CamperId);
+
+            modelBuilder.Entity<CamperAllergies>()
+                .HasOne(ca => ca.Allergy)
+                .WithMany()
+                .HasForeignKey(ca => ca.AllergyId);
+        }
+    } 
 }

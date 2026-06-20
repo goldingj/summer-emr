@@ -15,15 +15,29 @@ export default function CamperProfile() {
 
         fetch(`http://localhost:5227/api/campers/${id}`)
             .then(response => response.json())
-            .then(setCamper)
-            .catch(error => console.error('Error fetching camper:', error));
+            .then(data => {
+                console.log("CAMPER DATA:", data)
+                setCamper(data);
+            });
+            /*.then(setCamper)*/
+            /*.catch(error => console.error('Error fetching camper:', error));*/
 
         fetch(`http://localhost:5227/api/CamperParent/camper/${id}`)
             .then(async (res) => {
-                if (!res.ok) return null;
-                return await res.json();
+                console.log("STATUS:", res.status);
+                /*if (!res.ok) {
+                    console.log("Parent fetch failed:", res.status);
+                    return null;
+                }*/
+
+
+                const text = await res.text();
+                console.log("RAW RESPONSE:", text);
+                /*if (!text) return null;*/
+                return JSON.parse(text);
             })
             .then(data => {
+                console.log("CAMPER DATA:", data);
                 setParent(data);
             })
             .catch(err => console.error("Error fetching parent:", err));
@@ -66,13 +80,7 @@ export default function CamperProfile() {
                         </div>
                         <div className="hidden md:block">
                             <div className="ml-4 flex items-center md:ml-6">
-                                <button type="button" className="relative rounded-full p-1 text-gray-400 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500">
-                                    <span className="absolute -inset-1.5"></span>
-                                    <span className="sr-only">View notifications</span>
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" data-slot="icon" aria-hidden="true" className="size-6">
-                                        <path d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" strokeLinecap="round" strokeLinejoin="round" />
-                                    </svg>
-                                </button>
+                                
                             </div>
                         </div>
 
@@ -99,7 +107,18 @@ export default function CamperProfile() {
                                 <p><strong>First Name: </strong>{camper.firstName}</p>
                                 <p><strong>Last Name: </strong>{camper.lastName}</p>
 
-                                 
+                                <div>
+                                    <strong>Allergies: </strong>
+                                    {camper?.allergies?.length > 0 ? (
+                                        camper.allergies.map(a => (
+                                            <div key={a.allergyId}>
+                                                {a.allergen}
+                                            </div>
+                                        ))
+                                    ) : (
+                                        <div>None</div>
+                                    )}
+                                
                                 <p><strong>Gender: </strong>{genders.find(g => g.genderId === camper.genderId)?.genderName}</p>
                                 <p><strong>Date of Birth: </strong>{camper.dateOfBirth}</p>
                                 <p><strong>Bunk: </strong>{bunks.find(b => b.bunkId === camper.bunkId)?.bunkName}</p>
@@ -114,7 +133,7 @@ export default function CamperProfile() {
                             </button></Link>
                         </div>
                         
-                        
+                        </div>
                     </form>
                     <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
                         <Link to={`/editCamper/${camper.camperId}`}><button type="button" className="absolute left-4 bottom-4 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">

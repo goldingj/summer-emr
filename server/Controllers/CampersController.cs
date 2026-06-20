@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using server.Data;
 using server.Models;
 namespace server.Controllers
@@ -24,12 +25,30 @@ namespace server.Controllers
         [HttpGet("{id}")]
         public IActionResult GetCamperById(int id)
         {
-            var camper = _context.Campers.FirstOrDefault(c => c.CamperId == id);
+            var camper = _context.Campers
+                 .Include(ca => ca.CamperAllergies)
+                    .ThenInclude(ca => ca.Allergy)
+                .FirstOrDefault(c => c.CamperId == id);
             if (camper == null)
             {
                 return NotFound();
             }
-            return Ok(camper);
+            return Ok(new
+            {
+                camper.CamperId,
+                camper.FirstName,
+                camper.LastName,
+                camper.DateOfBirth,
+                camper.BunkId,
+                camper.GenderId,
+
+                Allergies = camper.CamperAllergies
+                    .Select(ca => new
+                    {
+                        allergyId = ca.Allergy.AllergyId,
+                        allergen = ca.Allergy.Allergy
+                    }).ToList()
+            });
         }
 
         [HttpPost]
@@ -67,6 +86,48 @@ namespace server.Controllers
                 }
             }
 
+            _context.CamperAllergies.RemoveRange(
+                _context.CamperAllergies.Where(ca => ca.CamperId == id)
+                );
+            if(updatedInfo.AllergyIds != null)
+            {
+                var newAllergies = updatedInfo.AllergyIds.Select(allergyId => new CamperAllergies
+                {
+                    CamperId = id,
+                    AllergyId = allergyId
+                });
+
+                _context.CamperAllergies.AddRange(newAllergies);
+            }
+
+            _context.SaveChanges();
+
+            return Ok();
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeleteCamper(int id)
+        {
+            var camper = _context.Campers.FirstOrDefault(c => c.CamperId == id);
+
+            if(camper == null)
+            {
+                return NotFound();
+            }
+
+            _context.CamperAllergies.RemoveRange(
+                _context.CamperAllergies.Where(ca => ca.CamperId == id)
+                );
+
+            _context.CamperMedications.RemoveRange(
+                _context.CamperMedications.Where(cm => cm.CamperId == id)
+                );
+
+            _context.CamperParents.RemoveRange(
+                _context.CamperParents.Where(cp => cp.CamperId == id)
+                );
+
+            _context.Campers.Remove(camper);
             _context.SaveChanges();
 
             return Ok();

@@ -15,7 +15,10 @@ namespace server.Models
         public required int GenderId { get; set; }
         [Column("date_of_birth")]
         public required DateOnly DateOfBirth { get; set; }
-        [Column("bunk")]
-        public required int BunkId { get; set; }
+        [Column("bunk_id")]
+        public int BunkId { get; set; }
+        [ForeignKey("BunkId")]
+        public Bunks? Bunk { get; set; }
+        public List<CamperAllergies> CamperAllergies { get; set; } = new();
     }
 }

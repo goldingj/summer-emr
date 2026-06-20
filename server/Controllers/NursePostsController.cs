@@ -23,6 +23,7 @@ namespace server.Controllers
         [HttpPost]
         public IActionResult CreateNursePost(NursesPosts newPost)
         {
+            newPost.CreatedAt = DateTime.UtcNow;
             _context.NursesPosts.Add(newPost);
             _context.SaveChanges();
             return Ok(newPost);

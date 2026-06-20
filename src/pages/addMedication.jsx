@@ -71,8 +71,8 @@ export default function AddMedication() {
                                     <label htmlFor="medName" className="block text-sm/6 font-medium text-white">
                                         Medication Name
                                     </label>
-                                    <select value={medicationId} onChange={(e) => setMedicationId(e.target.value)}>
-                                        <option className="bg-gray-900 text-white" value="">Select Medication</option>
+                                    <select value={medicationId} onChange={(e) => setMedicationId(e.target.value)} className = "text-white">
+                                        <option className="bg-gray-900 text-gray-400" value="">Select Medication</option>
                                         {medications.map((medication) => (
                                             <option key={medication.medicationId} className="bg-gray-900 text-white" value={medication.medicationId}>
                                                 {medication.name}

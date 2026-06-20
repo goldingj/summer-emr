@@ -6,8 +6,9 @@
     "\\server\\Data",
     "\\server\\Models",
     "\\src",
+    "\\src\\assets",
     "\\src\\pages"
   ],
-  "SelectedNode": "\\src\\pages\\reports.jsx",
+  "SelectedNode": "\\src\\pages\\addMedication.jsx",
   "PreviewInSolutionExplorer": false
 }

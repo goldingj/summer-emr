@@ -12,5 +12,7 @@ namespace server.Models
         public string ParentFirstName { get; set; } = string.Empty;
         public string ParentLastName { get; set; } = string.Empty;
         public string PhoneNumber { get; set; } = string.Empty;
+
+        public List<int> AllergyIds { get; set; }
     }
 }
