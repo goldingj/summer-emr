@@ -9,6 +9,6 @@
     "\\src\\assets",
     "\\src\\pages"
   ],
-  "SelectedNode": "\\src\\pages\\addMedication.jsx",
+  "SelectedNode": "\\server\\Controllers\\CampersController.cs",
   "PreviewInSolutionExplorer": false
 }

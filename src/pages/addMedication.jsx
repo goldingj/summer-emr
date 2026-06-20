@@ -23,8 +23,6 @@ export default function AddMedication() {
         const handleSubmit = async (e) => {
             e.preventDefault();
 
-            console.log("Submit Fired");
-
             const medicationData = {
                 camperId: parseInt(camperId),
                 medicationId: parseInt(medicationId),

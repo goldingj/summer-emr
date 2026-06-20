@@ -5,12 +5,6 @@ export default function Reports() {
     const [activeReport, setActiveReport] = useState(null);
     const [data, setData] = useState([]);
 
-    /*useEffect(() => {
-        fetch("http://localhost:5227/api/reports/campers-by-bunk")
-            .then(response => response.json())
-            .then(data => setCampersByBunk(data))
-            .catch(error => console.error(error));
-    }, []);*/
 
     const loadCampersByBunk = async () => {
         const response = await fetch("http://localhost:5227/api/Reports/campers-by-bunk");

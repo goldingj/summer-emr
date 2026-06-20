@@ -74,11 +74,6 @@ export default function Campers() {
                     ))}
 
 
-                    {/*{campers.map((c) => (
-                        <div key={c.camperId}>
-                            <Link to={`/campers/${c.camperId}`}>{c.lastName}, {c.firstName}</Link>
-                        </div>
-                    ))}*/}
                 </div>
             </main>
         </div>

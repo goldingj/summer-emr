@@ -54,6 +54,16 @@ namespace server.Controllers
         [HttpPost]
         public IActionResult AddCamper(Camper camper)
         {
+
+            if (string.IsNullOrWhiteSpace(camper.FirstName?.Trim()) || string.IsNullOrWhiteSpace(camper.LastName?.Trim()))
+            {
+                return BadRequest("First and last name are required.");
+            }
+
+            if (camper.GenderId <=0 || camper.BunkId <= 0)
+            {
+                return BadRequest("Gender and Bunk must be selected.");
+            }
             _context.Campers.Add(camper);
             _context.SaveChanges();
 
@@ -63,11 +73,24 @@ namespace server.Controllers
         [HttpPut("{id}")]
         public IActionResult UpdateCamper(int id, EditCamperDTO updatedInfo)
         {
+            
+
             var camper = _context.Campers.FirstOrDefault(c => c.CamperId == id);
             if (camper == null)
             {
                 return NotFound();
             }
+
+            if (string.IsNullOrWhiteSpace(updatedInfo.FirstName?.Trim()) || string.IsNullOrWhiteSpace(updatedInfo.LastName?.Trim()))
+            {
+                return BadRequest("First and last name are required.");
+            }
+
+            if (camper.GenderId <= 0 || camper.BunkId <= 0)
+            {
+                return BadRequest("Gender and Bunk must be selected.");
+            }
+
             camper.FirstName = updatedInfo.FirstName;
             camper.LastName = updatedInfo.LastName;
             camper.DateOfBirth = updatedInfo.DateOfBirth;

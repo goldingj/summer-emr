@@ -37,6 +37,11 @@ namespace server.Controllers
         [HttpPost]
         public IActionResult AssignMedicationToCamper(CamperMedicationDTO dto)
         {
+            if (dto.MedicationName <= 0) 
+                {
+                return BadRequest("Medication name is required");
+                }
+
             Console.WriteLine("POST HIT");
             var camperMedication = new CamperMedications
             {

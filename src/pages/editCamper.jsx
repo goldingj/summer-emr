@@ -19,7 +19,7 @@ export default function EditCamper() {
 
     const handleSubmit = async(e) => {
         e.preventDefault(); 
-        await fetch(`http://localhost:5227/api/campers/${id}`, {
+        const response = await fetch(`http://localhost:5227/api/campers/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -27,14 +27,17 @@ export default function EditCamper() {
             body: JSON.stringify({ firstName, lastName, allergyIds: selectedAllergies, genderId, bunkId, dateOfBirth, parentFirstName, parentLastName, phoneNumber })
         })
 
-        /*await fetch(`http://localhost:5227/api/campers/${id}/allergies`, {
-            method: "PUT",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                camperId: id,
-                allergyIds: selectedAllergies
-            })
-        });*/
+        if (!response.ok) {
+            const error = await response.text();
+            alert(error);
+            return;
+        }
+
+        if (response.ok) {
+            alert("Camper updated successfully!");
+            navigate("/campers");
+        }
+
 
         alert("Camper updated successfully!");
     };
@@ -64,8 +67,6 @@ export default function EditCamper() {
                 setFirstName(data.firstName);
                 setLastName(data.lastName);
                 setDateOfBirth(data.dateOfBirth?.split("T")[0]);
-                /*setGenderId(data.genderId);
-                setBunks(data.bunkId);*/
 
                 setGenderId(
                     data.genderId ??

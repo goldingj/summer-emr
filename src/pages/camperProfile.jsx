@@ -16,28 +16,19 @@ export default function CamperProfile() {
         fetch(`http://localhost:5227/api/campers/${id}`)
             .then(response => response.json())
             .then(data => {
-                console.log("CAMPER DATA:", data)
                 setCamper(data);
             });
-            /*.then(setCamper)*/
-            /*.catch(error => console.error('Error fetching camper:', error));*/
 
         fetch(`http://localhost:5227/api/CamperParent/camper/${id}`)
             .then(async (res) => {
-                console.log("STATUS:", res.status);
-                /*if (!res.ok) {
-                    console.log("Parent fetch failed:", res.status);
-                    return null;
-                }*/
+                if (!res.ok) {
+                    throw new Error(`Parent fetch failed:, ${res.status}`);
+                }
 
+                return res.json();
 
-                const text = await res.text();
-                console.log("RAW RESPONSE:", text);
-                /*if (!text) return null;*/
-                return JSON.parse(text);
             })
             .then(data => {
-                console.log("CAMPER DATA:", data);
                 setParent(data);
             })
             .catch(err => console.error("Error fetching parent:", err));
