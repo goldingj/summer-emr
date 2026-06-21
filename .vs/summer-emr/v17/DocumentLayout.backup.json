@@ -3,36 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\jgold\\summer-emr\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jgold\\summer-emr\\server\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:server\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jgold\\summer-emr\\server\\Controllers\\CamperMedicationsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:server\\Controllers\\CamperMedicationsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jgold\\summer-emr\\src\\pages\\addMedication.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\addMedication.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jgold\\summer-emr\\src\\pages\\addCamper.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\addCamper.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jgold\\summer-emr\\src\\pages\\editCamper.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\editCamper.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jgold\\summer-emr\\server\\Models\\Campers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:server\\Models\\Campers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jgold\\summer-emr\\src\\pages\\mar.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\mar.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jgold\\summer-emr\\server\\Controllers\\ReportsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:server\\Controllers\\ReportsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jgold\\summer-emr\\server\\Controllers\\CampersController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:server\\Controllers\\CampersController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jgold\\summer-emr\\server\\Models\\NursePosts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:server\\Models\\NursePosts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jgold\\summer-emr\\src\\pages\\camperProfile.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\camperProfile.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,106 +31,52 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "addMedication.jsx",
-              "DocumentMoniker": "C:\\Users\\jgold\\summer-emr\\src\\pages\\addMedication.jsx",
-              "RelativeDocumentMoniker": "src\\pages\\addMedication.jsx",
-              "ToolTip": "C:\\Users\\jgold\\summer-emr\\src\\pages\\addMedication.jsx",
-              "RelativeToolTip": "src\\pages\\addMedication.jsx",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAAAFAAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-06-20T04:46:47.771Z",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\jgold\\summer-emr\\server\\Program.cs",
+              "RelativeDocumentMoniker": "server\\Program.cs",
+              "ToolTip": "C:\\Users\\jgold\\summer-emr\\server\\Program.cs",
+              "RelativeToolTip": "server\\Program.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-20T06:11:38.219Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "editCamper.jsx",
-              "DocumentMoniker": "C:\\Users\\jgold\\summer-emr\\src\\pages\\editCamper.jsx",
-              "RelativeDocumentMoniker": "src\\pages\\editCamper.jsx",
-              "ToolTip": "C:\\Users\\jgold\\summer-emr\\src\\pages\\editCamper.jsx",
-              "RelativeToolTip": "src\\pages\\editCamper.jsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "addMedication.jsx",
+              "DocumentMoniker": "C:\\Users\\jgold\\summer-emr\\src\\pages\\addMedication.jsx",
+              "RelativeDocumentMoniker": "src\\pages\\addMedication.jsx",
+              "ToolTip": "C:\\Users\\jgold\\summer-emr\\src\\pages\\addMedication.jsx",
+              "RelativeToolTip": "src\\pages\\addMedication.jsx",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAB0AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-06-20T04:40:53.021Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-20T06:01:43.698Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "addCamper.jsx",
-              "DocumentMoniker": "C:\\Users\\jgold\\summer-emr\\src\\pages\\addCamper.jsx",
-              "RelativeDocumentMoniker": "src\\pages\\addCamper.jsx",
-              "ToolTip": "C:\\Users\\jgold\\summer-emr\\src\\pages\\addCamper.jsx",
-              "RelativeToolTip": "src\\pages\\addCamper.jsx",
-              "ViewState": "AgIAAG4AAAAAAAAAAAAAwHgAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-06-20T04:40:27.824Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "mar.jsx",
-              "DocumentMoniker": "C:\\Users\\jgold\\summer-emr\\src\\pages\\mar.jsx",
-              "RelativeDocumentMoniker": "src\\pages\\mar.jsx",
-              "ToolTip": "C:\\Users\\jgold\\summer-emr\\src\\pages\\mar.jsx",
-              "RelativeToolTip": "src\\pages\\mar.jsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-06-20T04:26:48.178Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ReportsController.cs",
-              "DocumentMoniker": "C:\\Users\\jgold\\summer-emr\\server\\Controllers\\ReportsController.cs",
-              "RelativeDocumentMoniker": "server\\Controllers\\ReportsController.cs",
-              "ToolTip": "C:\\Users\\jgold\\summer-emr\\server\\Controllers\\ReportsController.cs",
-              "RelativeToolTip": "server\\Controllers\\ReportsController.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAAC4AAAAJAAAAAAAAAA==",
+              "Title": "CamperMedicationsController.cs",
+              "DocumentMoniker": "C:\\Users\\jgold\\summer-emr\\server\\Controllers\\CamperMedicationsController.cs",
+              "RelativeDocumentMoniker": "server\\Controllers\\CamperMedicationsController.cs",
+              "ToolTip": "C:\\Users\\jgold\\summer-emr\\server\\Controllers\\CamperMedicationsController.cs",
+              "RelativeToolTip": "server\\Controllers\\CamperMedicationsController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACkAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-20T04:00:42.04Z",
+              "WhenOpened": "2026-06-20T05:24:03.265Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Campers.cs",
-              "DocumentMoniker": "C:\\Users\\jgold\\summer-emr\\server\\Models\\Campers.cs",
-              "RelativeDocumentMoniker": "server\\Models\\Campers.cs",
-              "ToolTip": "C:\\Users\\jgold\\summer-emr\\server\\Models\\Campers.cs",
-              "RelativeToolTip": "server\\Models\\Campers.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-20T04:00:30.605Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CampersController.cs",
-              "DocumentMoniker": "C:\\Users\\jgold\\summer-emr\\server\\Controllers\\CampersController.cs",
-              "RelativeDocumentMoniker": "server\\Controllers\\CampersController.cs",
-              "ToolTip": "C:\\Users\\jgold\\summer-emr\\server\\Controllers\\CampersController.cs",
-              "RelativeToolTip": "server\\Controllers\\CampersController.cs",
-              "ViewState": "AgIAAHUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-20T04:00:07.266Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "NursePosts.cs",
-              "DocumentMoniker": "C:\\Users\\jgold\\summer-emr\\server\\Models\\NursePosts.cs",
-              "RelativeDocumentMoniker": "server\\Models\\NursePosts.cs",
-              "ToolTip": "C:\\Users\\jgold\\summer-emr\\server\\Models\\NursePosts.cs",
-              "RelativeToolTip": "server\\Models\\NursePosts.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-20T02:23:52.675Z",
-              "EditorCaption": ""
+              "Title": "camperProfile.jsx",
+              "DocumentMoniker": "C:\\Users\\jgold\\summer-emr\\src\\pages\\camperProfile.jsx",
+              "RelativeDocumentMoniker": "src\\pages\\camperProfile.jsx",
+              "ToolTip": "C:\\Users\\jgold\\summer-emr\\src\\pages\\camperProfile.jsx",
+              "RelativeToolTip": "src\\pages\\camperProfile.jsx",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-06-20T05:12:46.242Z"
             }
           ]
         },

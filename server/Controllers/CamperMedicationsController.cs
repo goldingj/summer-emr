@@ -37,7 +37,7 @@ namespace server.Controllers
         [HttpPost]
         public IActionResult AssignMedicationToCamper(CamperMedicationDTO dto)
         {
-            if (dto.MedicationName <= 0) 
+            if (dto.MedicationId <= 0) 
                 {
                 return BadRequest("Medication name is required");
                 }

@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:server\\Controllers\\CamperMedicationsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jgold\\summer-emr\\server\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:server\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jgold\\summer-emr\\src\\pages\\addMedication.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\addMedication.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
@@ -22,11 +26,24 @@
       "DocumentGroups": [
         {
           "DockedHeight": 372,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\jgold\\summer-emr\\server\\Program.cs",
+              "RelativeDocumentMoniker": "server\\Program.cs",
+              "ToolTip": "C:\\Users\\jgold\\summer-emr\\server\\Program.cs",
+              "RelativeToolTip": "server\\Program.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABcAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-20T06:11:38.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "addMedication.jsx",
               "DocumentMoniker": "C:\\Users\\jgold\\summer-emr\\src\\pages\\addMedication.jsx",
               "RelativeDocumentMoniker": "src\\pages\\addMedication.jsx",
@@ -34,8 +51,7 @@
               "RelativeToolTip": "src\\pages\\addMedication.jsx",
               "ViewState": "AgIAAB4AAAAAAAAAAAAAAB0AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-06-20T06:01:43.698Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-20T06:01:43.698Z"
             },
             {
               "$type": "Document",
@@ -45,14 +61,14 @@
               "RelativeDocumentMoniker": "server\\Controllers\\CamperMedicationsController.cs",
               "ToolTip": "C:\\Users\\jgold\\summer-emr\\server\\Controllers\\CamperMedicationsController.cs",
               "RelativeToolTip": "server\\Controllers\\CamperMedicationsController.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAACkAAABBAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAACkAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-20T05:24:03.265Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "camperProfile.jsx",
               "DocumentMoniker": "C:\\Users\\jgold\\summer-emr\\src\\pages\\camperProfile.jsx",
               "RelativeDocumentMoniker": "src\\pages\\camperProfile.jsx",
@@ -60,8 +76,7 @@
               "RelativeToolTip": "src\\pages\\camperProfile.jsx",
               "ViewState": "AgIAABIAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-06-20T05:12:46.242Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-20T05:12:46.242Z"
             }
           ]
         },
