@@ -29,4 +29,7 @@ app.UseCors("AllowReact");
 
 app.MapControllers();
 
+var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
+app.Urls = $"http://0.0.0.0:{port}";
+
 app.Run();
