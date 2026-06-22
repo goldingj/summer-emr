@@ -7,7 +7,7 @@ export default function Reports() {
 
 
     const loadCampersByBunk = async () => {
-        const response = await fetch("http://localhost:5227/api/Reports/campers-by-bunk");
+        const response = await fetch("http://summer-camp-emr-env.eba-ybkpfisp.us-east-1.elasticbeanstalk.com/api/Reports/campers-by-bunk");
         if (!response.ok) {
             const text = await response.text();
             console.error("error:", response.status, text);
@@ -19,14 +19,14 @@ export default function Reports() {
     };
 
     const loadAllergies = async () => {
-        const response = await fetch("http://localhost:5227/api/reports/allergies");
+        const response = await fetch("http://summer-camp-emr-env.eba-ybkpfisp.us-east-1.elasticbeanstalk.com/api/reports/allergies");
         const json = await response.json();
         setData(json);
         setActiveReport('allergies');
     };
 
     const loadMedications = async () => {
-        const response = await fetch("http://localhost:5227/api/reports/medications");
+        const response = await fetch("http://summer-camp-emr-env.eba-ybkpfisp.us-east-1.elasticbeanstalk.com/api/reports/medications");
         const json = await response.json();
         setData(json);
         setActiveReport('meds');

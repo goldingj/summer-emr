@@ -5,7 +5,7 @@ export default function MAR() {
     const [marItems, setMarItems] = useState([]);
 
     const loadMAR = () => {
-        fetch('http://localhost:5227/api/MAR')
+        fetch('http://summer-camp-emr-env.eba-ybkpfisp.us-east-1.elasticbeanstalk.com/api/MAR')
             .then((response) => response.json())
             .then((data) => setMarItems(data));
     };
@@ -16,7 +16,7 @@ export default function MAR() {
     }, []);
 
     const handleAdminister = async (camperMedicationId) => {
-        const response = await fetch(`http://localhost:5227/api/MAR/administer/${camperMedicationId}`, {
+        const response = await fetch(`http://summer-camp-emr-env.eba-ybkpfisp.us-east-1.elasticbeanstalk.com/api/MAR/administer/${camperMedicationId}`, {
             method: 'POST'
         });
 

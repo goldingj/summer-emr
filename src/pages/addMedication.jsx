@@ -12,7 +12,7 @@ export default function AddMedication() {
     const [specialInstructions, setInstructions] = useState('');
 
     useEffect(() => {
-            fetch('http://localhost:5227/api/Medications')
+        fetch('http://summer-camp-emr-env.eba-ybkpfisp.us-east-1.elasticbeanstalk.com/api/Medications')
                 .then(response => response.json())
                 .then(data => setMedications(data))
                 .catch(error => console.error('Error fetching medications:', error));
@@ -32,7 +32,7 @@ export default function AddMedication() {
                 instructions: specialInstructions
             };
 
-            const response = await fetch('http://localhost:5227/api/CamperMedications', {
+            const response = await fetch('http://summer-camp-emr-env.eba-ybkpfisp.us-east-1.elasticbeanstalk.com/api/CamperMedications', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

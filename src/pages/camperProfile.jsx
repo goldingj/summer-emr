@@ -13,13 +13,13 @@ export default function CamperProfile() {
             return
         };
 
-        fetch(`http://localhost:5227/api/campers/${id}`)
+        fetch(`http://summer-camp-emr-env.eba-ybkpfisp.us-east-1.elasticbeanstalk.com/api/campers/${id}`)
             .then(response => response.json())
             .then(data => {
                 setCamper(data);
             });
 
-        fetch(`http://localhost:5227/api/CamperParent/camper/${id}`)
+        fetch(`http://summer-camp-emr-env.eba-ybkpfisp.us-east-1.elasticbeanstalk.com/api/CamperParent/camper/${id}`)
             .then(async (res) => {
                 if (!res.ok) {
                     throw new Error(`Parent fetch failed:, ${res.status}`);
@@ -33,12 +33,12 @@ export default function CamperProfile() {
             })
             .catch(err => console.error("Error fetching parent:", err));
 
-        fetch(`http://localhost:5227/api/Genders`)
+        fetch(`http://summer-camp-emr-env.eba-ybkpfisp.us-east-1.elasticbeanstalk.com/api/Genders`)
             .then(response => response.json())
             .then(data =>
                 setGenders(data));
             
-        fetch(`http://localhost:5227/api/Bunks`)
+        fetch(`http://summer-camp-emr-env.eba-ybkpfisp.us-east-1.elasticbeanstalk.com/api/Bunks`)
             .then(response => response.json())
             .then(data =>
                 setBunks(data));

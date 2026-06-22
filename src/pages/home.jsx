@@ -6,7 +6,7 @@ export default function Home() {
     const [message, setMessage] = useState("");
 
     useEffect(() => {
-        fetch('http://localhost:5227/api/NursePosts')
+        fetch('http://summer-camp-emr-env.eba-ybkpfisp.us-east-1.elasticbeanstalk.com/api/NursePosts')
             .then((response) => response.json())
             .then((data) => {
                 console.log(data);
@@ -18,7 +18,7 @@ export default function Home() {
         e.preventDefault();
         const newPost = { nurseMessage: message };
 
-        const response = await fetch('http://localhost:5227/api/NursePosts', {
+        const response = await fetch('http://summer-camp-emr-env.eba-ybkpfisp.us-east-1.elasticbeanstalk.com/api/NursePosts', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
