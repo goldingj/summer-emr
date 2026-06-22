@@ -17,7 +17,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReact", policy =>
     {
-        policy.WithOrigins("http://localhost:5173")
+        policy.WithOrigins("http://localhost:5173", "https://working-branch.d2qtozm702yx16.amplifyapp.com/")
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
