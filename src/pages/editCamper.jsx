@@ -19,7 +19,7 @@ export default function EditCamper() {
 
     const handleSubmit = async(e) => {
         e.preventDefault(); 
-        const response = await fetch(`http://summer-camp-emr-env.eba-ybkpfisp.us-east-1.elasticbeanstalk.com/api/campers/${id}`, {
+        const response = await fetch(`https://summer-camp-emr-env.eba-ybkpfisp.us-east-1.elasticbeanstalk.com/api/campers/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -49,7 +49,7 @@ export default function EditCamper() {
 
         if (!confirm) return;
 
-        const response = await fetch(`http://summer-camp-emr-env.eba-ybkpfisp.us-east-1.elasticbeanstalk.com/api/campers/${id}`, {
+        const response = await fetch(`https://summer-camp-emr-env.eba-ybkpfisp.us-east-1.elasticbeanstalk.com/api/campers/${id}`, {
             method: "DELETE"
         });
 
@@ -61,7 +61,7 @@ export default function EditCamper() {
     };
     
     useEffect(() => {
-        fetch(`http://summer-camp-emr-env.eba-ybkpfisp.us-east-1.elasticbeanstalk.com/api/campers/${id}`)
+        fetch(`https://summer-camp-emr-env.eba-ybkpfisp.us-east-1.elasticbeanstalk.com/api/campers/${id}`)
             .then(response => response.json())
             .then(data => {
                 setFirstName(data.firstName);
@@ -85,14 +85,14 @@ export default function EditCamper() {
                 );
             });
 
-        fetch(`http://summer-camp-emr-env.eba-ybkpfisp.us-east-1.elasticbeanstalk.com/api/CamperParent/camper/${id}`)
+        fetch(`https://summer-camp-emr-env.eba-ybkpfisp.us-east-1.elasticbeanstalk.com/api/CamperParent/camper/${id}`)
             .then(response => response.json())
             .then(data => {
                 setParentFirstName(data.parentFirstName);
                 setParentLastName(data.parentLastName);
                 setPhoneNumber(data.phoneNumber);
             });
-        fetch("http://summer-camp-emr-env.eba-ybkpfisp.us-east-1.elasticbeanstalk.com/api/genders")
+        fetch("https://summer-camp-emr-env.eba-ybkpfisp.us-east-1.elasticbeanstalk.com/api/genders")
             .then(async (response) => {
                 if (!response.ok) {
                     throw new Error("Failed to fetch genders");
@@ -106,13 +106,13 @@ export default function EditCamper() {
             .catch(error => { console.error(error) });
 
 
-        fetch("http://summer-camp-emr-env.eba-ybkpfisp.us-east-1.elasticbeanstalk.com/api/allergies")
+        fetch("https://summer-camp-emr-env.eba-ybkpfisp.us-east-1.elasticbeanstalk.com/api/allergies")
             .then(response => response.json())
             .then(setAllergyOptions);
 
        
 
-        fetch("http://summer-camp-emr-env.eba-ybkpfisp.us-east-1.elasticbeanstalk.com/api/bunks")
+        fetch("https://summer-camp-emr-env.eba-ybkpfisp.us-east-1.elasticbeanstalk.com/api/bunks")
             .then(async (response) => {
                 if (!response.ok) {
                     throw new Error("Failed to fetch bunks");

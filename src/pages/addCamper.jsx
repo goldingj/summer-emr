@@ -17,17 +17,17 @@ export default function AddCamper() {
     const [parentPhone, setParentPhone] = useState("");
 
     useEffect(() => {
-        fetch("http://summer-camp-emr-env.eba-ybkpfisp.us-east-1.elasticbeanstalk.com/api/genders")
+        fetch("https://summer-camp-emr-env.eba-ybkpfisp.us-east-1.elasticbeanstalk.com/api/genders")
             .then(response => response.json())
             .then(data => setGenders(data))
             .catch(error => console.error("Error fetching genders:", error));
 
-        fetch("http://summer-camp-emr-env.eba-ybkpfisp.us-east-1.elasticbeanstalk.com/api/bunks")
+        fetch("https://summer-camp-emr-env.eba-ybkpfisp.us-east-1.elasticbeanstalk.com/api/bunks")
             .then(response => response.json())
             .then(data => setBunks(data))
             .catch(error => console.error("Error fetching bunks:", error));
 
-        fetch("http://summer-camp-emr-env.eba-ybkpfisp.us-east-1.elasticbeanstalk.com/api/allergies")
+        fetch("https://summer-camp-emr-env.eba-ybkpfisp.us-east-1.elasticbeanstalk.com/api/allergies")
             .then(response => response.json())
             .then(data => setAllergies(data))
             .catch(error => console.error(error));
@@ -61,7 +61,7 @@ export default function AddCamper() {
             };
 
             console.log(camperData);
-            const camperResponse = await fetch("http://summer-camp-emr-env.eba-ybkpfisp.us-east-1.elasticbeanstalk.com/api/campers", {
+            const camperResponse = await fetch("https://summer-camp-emr-env.eba-ybkpfisp.us-east-1.elasticbeanstalk.com/api/campers", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -82,7 +82,7 @@ export default function AddCamper() {
             }
 
             console.log(parentData);
-            const parentResponse = await fetch("http://summer-camp-emr-env.eba-ybkpfisp.us-east-1.elasticbeanstalk.com/api/parents", {
+            const parentResponse = await fetch("https://summer-camp-emr-env.eba-ybkpfisp.us-east-1.elasticbeanstalk.com/api/parents", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -95,7 +95,7 @@ export default function AddCamper() {
 
             console.log(savedParentInfo);
             console.log(savedCamperInfo);
-            await fetch("http://summer-camp-emr-env.eba-ybkpfisp.us-east-1.elasticbeanstalk.com/api/CamperParent", {
+            await fetch("https://summer-camp-emr-env.eba-ybkpfisp.us-east-1.elasticbeanstalk.com/api/CamperParent", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -106,7 +106,7 @@ export default function AddCamper() {
                 })
             });
 
-            await fetch("http://summer-camp-emr-env.eba-ybkpfisp.us-east-1.elasticbeanstalk.com/api/camperallergies", {
+            await fetch("https://summer-camp-emr-env.eba-ybkpfisp.us-east-1.elasticbeanstalk.com/api/camperallergies", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
