@@ -8,10 +8,10 @@ export default function Home() {
     useEffect(() => {
         fetch('https://krb11kwl6k.execute-api.us-east-1.amazonaws.com/api/NursePosts')
             .then((response) => response.json())
-            .then((data) => {
-                console.log(data);
-                setPosts(data);
-            });
+            .then((data) =>
+                setPosts(data || []))
+            .catch(() => setPosts([]));
+            
     }, []);
 
     const handleSubmit = async (e) => {
