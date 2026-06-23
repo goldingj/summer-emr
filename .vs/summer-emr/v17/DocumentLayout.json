@@ -33,6 +33,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jgold\\summer-emr\\src\\pages\\addCamper.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\addCamper.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jgold\\summer-emr\\server\\Models\\Campers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:server\\Models\\Campers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -41,7 +45,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 28,
+          "DockedHeight": 372,
           "SelectedChildIndex": 0,
           "Children": [
             {
@@ -52,9 +56,9 @@
               "RelativeDocumentMoniker": "src\\pages\\reports.jsx",
               "ToolTip": "C:\\Users\\jgold\\summer-emr\\src\\pages\\reports.jsx",
               "RelativeToolTip": "src\\pages\\reports.jsx",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAACIAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAABkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-06-22T08:44:26.31Z",
+              "WhenOpened": "2026-06-23T01:48:45.791Z",
               "EditorCaption": ""
             },
             {
@@ -65,9 +69,9 @@
               "RelativeDocumentMoniker": "src\\pages\\mar.jsx",
               "ToolTip": "C:\\Users\\jgold\\summer-emr\\src\\pages\\mar.jsx",
               "RelativeToolTip": "src\\pages\\mar.jsx",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAABIAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABIAAABkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-06-22T08:44:16.733Z",
+              "WhenOpened": "2026-06-23T01:48:26.961Z",
               "EditorCaption": ""
             },
             {
@@ -78,9 +82,9 @@
               "RelativeDocumentMoniker": "src\\pages\\home.jsx",
               "ToolTip": "C:\\Users\\jgold\\summer-emr\\src\\pages\\home.jsx",
               "RelativeToolTip": "src\\pages\\home.jsx",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAABQAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAABQAAABkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-06-22T08:44:07.044Z",
+              "WhenOpened": "2026-06-23T01:48:10.787Z",
               "EditorCaption": ""
             },
             {
@@ -91,22 +95,9 @@
               "RelativeDocumentMoniker": "src\\pages\\editCamper.jsx",
               "ToolTip": "C:\\Users\\jgold\\summer-emr\\src\\pages\\editCamper.jsx",
               "RelativeToolTip": "src\\pages\\editCamper.jsx",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAAAHIAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAAAHIAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-06-22T08:43:42.984Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "campers.jsx",
-              "DocumentMoniker": "C:\\Users\\jgold\\summer-emr\\src\\pages\\campers.jsx",
-              "RelativeDocumentMoniker": "src\\pages\\campers.jsx",
-              "ToolTip": "C:\\Users\\jgold\\summer-emr\\src\\pages\\campers.jsx",
-              "RelativeToolTip": "src\\pages\\campers.jsx",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-06-22T08:43:36.467Z",
+              "WhenOpened": "2026-06-23T01:47:11.829Z",
               "EditorCaption": ""
             },
             {
@@ -117,9 +108,9 @@
               "RelativeDocumentMoniker": "src\\pages\\camperProfile.jsx",
               "ToolTip": "C:\\Users\\jgold\\summer-emr\\src\\pages\\camperProfile.jsx",
               "RelativeToolTip": "src\\pages\\camperProfile.jsx",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAACgAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAC0AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-06-22T08:43:22.508Z",
+              "WhenOpened": "2026-06-23T01:46:38.002Z",
               "EditorCaption": ""
             },
             {
@@ -130,9 +121,9 @@
               "RelativeDocumentMoniker": "src\\pages\\addMedication.jsx",
               "ToolTip": "C:\\Users\\jgold\\summer-emr\\src\\pages\\addMedication.jsx",
               "RelativeToolTip": "src\\pages\\addMedication.jsx",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAACIAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-06-22T08:43:09.486Z",
+              "WhenOpened": "2026-06-23T01:46:00.928Z",
               "EditorCaption": ""
             },
             {
@@ -143,9 +134,35 @@
               "RelativeDocumentMoniker": "src\\pages\\addCamper.jsx",
               "ToolTip": "C:\\Users\\jgold\\summer-emr\\src\\pages\\addCamper.jsx",
               "RelativeToolTip": "src\\pages\\addCamper.jsx",
-              "ViewState": "AgIAAIQAAAAAAAAAAAAAAGwAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAAAGwAAABXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-06-22T08:42:44.552Z",
+              "WhenOpened": "2026-06-23T01:44:54.622Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "campers.jsx",
+              "DocumentMoniker": "C:\\Users\\jgold\\summer-emr\\src\\pages\\campers.jsx",
+              "RelativeDocumentMoniker": "src\\pages\\campers.jsx",
+              "ToolTip": "C:\\Users\\jgold\\summer-emr\\src\\pages\\campers.jsx",
+              "RelativeToolTip": "src\\pages\\campers.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-06-23T01:44:30.273Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Campers.cs",
+              "DocumentMoniker": "C:\\Users\\jgold\\summer-emr\\server\\Models\\Campers.cs",
+              "RelativeDocumentMoniker": "server\\Models\\Campers.cs",
+              "ToolTip": "C:\\Users\\jgold\\summer-emr\\server\\Models\\Campers.cs",
+              "RelativeToolTip": "server\\Models\\Campers.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-23T00:08:48.566Z",
               "EditorCaption": ""
             }
           ]

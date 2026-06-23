@@ -2,6 +2,7 @@
   "ExpandedNodes": [
     "",
     "\\server",
+    "\\server\\Controllers",
     "\\server\\Data",
     "\\server\\Models",
     "\\server\\obj",
