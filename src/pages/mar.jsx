@@ -5,7 +5,7 @@ export default function MAR() {
     const [marItems, setMarItems] = useState([]);
 
     const loadMAR = () => {
-        fetch('https://https://krb11kwl6k.execute-api.us-east-1.amazonaws.com/api/MAR')
+        fetch('https://krb11kwl6k.execute-api.us-east-1.amazonaws.com/api/MAR')
             .then((response) => response.json())
             .then((data) => setMarItems(data));
     };
@@ -16,7 +16,7 @@ export default function MAR() {
     }, []);
 
     const handleAdminister = async (camperMedicationId) => {
-        const response = await fetch(`https://https://krb11kwl6k.execute-api.us-east-1.amazonaws.com/api/MAR/administer/${camperMedicationId}`, {
+        const response = await fetch(`https://krb11kwl6k.execute-api.us-east-1.amazonaws.com/api/MAR/administer/${camperMedicationId}`, {
             method: 'POST'
         });
 

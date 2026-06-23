@@ -13,13 +13,13 @@ export default function CamperProfile() {
             return
         };
 
-        fetch(`https://https://krb11kwl6k.execute-api.us-east-1.amazonaws.com/api/campers/${id}`)
+        fetch(`https://krb11kwl6k.execute-api.us-east-1.amazonaws.com/api/campers/${id}`)
             .then(response => response.json())
             .then(data => {
                 setCamper(data);
             });
 
-        fetch(`https://https://krb11kwl6k.execute-api.us-east-1.amazonaws.com/api/CamperParent/camper/${id}`)
+        fetch(`https://krb11kwl6k.execute-api.us-east-1.amazonaws.com/api/CamperParent/camper/${id}`)
             .then(async (res) => {
                 if (!res.ok) {
                     throw new Error(`Parent fetch failed:, ${res.status}`);
@@ -33,12 +33,12 @@ export default function CamperProfile() {
             })
             .catch(err => console.error("Error fetching parent:", err));
 
-        fetch(`https://https://krb11kwl6k.execute-api.us-east-1.amazonaws.com/api/Genders`)
+        fetch(`https://krb11kwl6k.execute-api.us-east-1.amazonaws.com/api/Genders`)
             .then(response => response.json())
             .then(data =>
                 setGenders(data));
             
-        fetch(`https://https://krb11kwl6k.execute-api.us-east-1.amazonaws.com/api/Bunks`)
+        fetch(`https://krb11kwl6k.execute-api.us-east-1.amazonaws.com/api/Bunks`)
             .then(response => response.json())
             .then(data =>
                 setBunks(data));

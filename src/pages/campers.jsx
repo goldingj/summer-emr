@@ -13,7 +13,7 @@ export default function Campers() {
     );
 
     useEffect(() => {
-        fetch("https://https://krb11kwl6k.execute-api.us-east-1.amazonaws.com/api/campers")
+        fetch("https://krb11kwl6k.execute-api.us-east-1.amazonaws.com/api/campers")
             .then(response => response.json())
             .then(data => setCampers(data))
             .catch(error => console.error("Error fetching campers:", error));

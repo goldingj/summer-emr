@@ -7,7 +7,7 @@ export default function Reports() {
 
 
     const loadCampersByBunk = async () => {
-        const response = await fetch("https://https://krb11kwl6k.execute-api.us-east-1.amazonaws.com/api/Reports/campers-by-bunk");
+        const response = await fetch("https://krb11kwl6k.execute-api.us-east-1.amazonaws.com/api/Reports/campers-by-bunk");
         if (!response.ok) {
             const text = await response.text();
             console.error("error:", response.status, text);
@@ -19,14 +19,14 @@ export default function Reports() {
     };
 
     const loadAllergies = async () => {
-        const response = await fetch("https://https://krb11kwl6k.execute-api.us-east-1.amazonaws.com/api/reports/allergies");
+        const response = await fetch("https://krb11kwl6k.execute-api.us-east-1.amazonaws.com/api/reports/allergies");
         const json = await response.json();
         setData(json);
         setActiveReport('allergies');
     };
 
     const loadMedications = async () => {
-        const response = await fetch("https://https://krb11kwl6k.execute-api.us-east-1.amazonaws.com/api/reports/medications");
+        const response = await fetch("https://krb11kwl6k.execute-api.us-east-1.amazonaws.com/api/reports/medications");
         const json = await response.json();
         setData(json);
         setActiveReport('meds');

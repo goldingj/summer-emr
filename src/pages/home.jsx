@@ -6,7 +6,7 @@ export default function Home() {
     const [message, setMessage] = useState("");
 
     useEffect(() => {
-        fetch('https://https://krb11kwl6k.execute-api.us-east-1.amazonaws.com/api/NursePosts')
+        fetch('https://krb11kwl6k.execute-api.us-east-1.amazonaws.com/api/NursePosts')
             .then((response) => response.json())
             .then((data) => {
                 console.log(data);
@@ -18,7 +18,7 @@ export default function Home() {
         e.preventDefault();
         const newPost = { nurseMessage: message };
 
-        const response = await fetch('https://https://krb11kwl6k.execute-api.us-east-1.amazonaws.com/api/NursePosts', {
+        const response = await fetch('https://krb11kwl6k.execute-api.us-east-1.amazonaws.com/api/NursePosts', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

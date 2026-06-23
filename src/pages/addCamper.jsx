@@ -17,17 +17,17 @@ export default function AddCamper() {
     const [parentPhone, setParentPhone] = useState("");
 
     useEffect(() => {
-        fetch("https://https://krb11kwl6k.execute-api.us-east-1.amazonaws.com/api/genders")
+        fetch("https://krb11kwl6k.execute-api.us-east-1.amazonaws.com/api/genders")
             .then(response => response.json())
             .then(data => setGenders(data))
             .catch(error => console.error("Error fetching genders:", error));
 
-        fetch("https://https://https://krb11kwl6k.execute-api.us-east-1.amazonaws.com/api/bunks")
+        fetch("https://krb11kwl6k.execute-api.us-east-1.amazonaws.com/api/bunks")
             .then(response => response.json())
             .then(data => setBunks(data))
             .catch(error => console.error("Error fetching bunks:", error));
 
-        fetch("https://https://https://krb11kwl6k.execute-api.us-east-1.amazonaws.com/api/allergies")
+        fetch("https://krb11kwl6k.execute-api.us-east-1.amazonaws.com/api/allergies")
             .then(response => response.json())
             .then(data => setAllergies(data))
             .catch(error => console.error(error));
@@ -61,7 +61,7 @@ export default function AddCamper() {
             };
 
             console.log(camperData);
-            const camperResponse = await fetch("https://https://krb11kwl6k.execute-api.us-east-1.amazonaws.com/api/campers", {
+            const camperResponse = await fetch("https://krb11kwl6k.execute-api.us-east-1.amazonaws.com/api/campers", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -82,7 +82,7 @@ export default function AddCamper() {
             }
 
             console.log(parentData);
-            const parentResponse = await fetch("https://https://krb11kwl6k.execute-api.us-east-1.amazonaws.com/api/parents", {
+            const parentResponse = await fetch("https://krb11kwl6k.execute-api.us-east-1.amazonaws.com/api/parents", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -95,7 +95,7 @@ export default function AddCamper() {
 
             console.log(savedParentInfo);
             console.log(savedCamperInfo);
-            await fetch("https://https://krb11kwl6k.execute-api.us-east-1.amazonaws.com/api/CamperParent", {
+            await fetch("https://krb11kwl6k.execute-api.us-east-1.amazonaws.com/api/CamperParent", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -106,7 +106,7 @@ export default function AddCamper() {
                 })
             });
 
-            await fetch("https://https://krb11kwl6k.execute-api.us-east-1.amazonaws.com/api/camperallergies", {
+            await fetch("https://krb11kwl6k.execute-api.us-east-1.amazonaws.com/api/camperallergies", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
