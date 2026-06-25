@@ -58,11 +58,13 @@ namespace server.Controllers
             if (string.IsNullOrWhiteSpace(camper.FirstName?.Trim()) || string.IsNullOrWhiteSpace(camper.LastName?.Trim()))
             {
                 return BadRequest("First and last name are required.");
+               
             }
 
             if (camper.GenderId <=0 || camper.BunkId <= 0)
             {
                 return BadRequest("Gender and Bunk must be selected.");
+                
             }
             _context.Campers.Add(camper);
             _context.SaveChanges();
