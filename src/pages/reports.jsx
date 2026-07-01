@@ -34,7 +34,7 @@ export default function Reports() {
 
     return (
         <div className="min-h-full">
-            <nav className="bg-gray-800">
+            <nav className="bg-gray-900">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="flex h-16 items-center justify-between">
                         <div className="flex items-center">
@@ -69,7 +69,7 @@ export default function Reports() {
 
 
 
-            <main>
+            <main className="bg-gray-900 h-screen text-white">
                 <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
                     <div className="flex justify-center gap-x-6 w-full">
                         <button onClick={loadCampersByBunk} className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Campers by Cabin</button>
@@ -126,7 +126,7 @@ export default function Reports() {
 
 
                         {activeReport === 'meds' && (
-                            <table>
+                            <table className="min-w-full divide-y divide-gray-200">
                                 <thead>
                                     <tr>
                                         <th>Camper</th>
@@ -138,7 +138,7 @@ export default function Reports() {
                                 <tbody>
                                     {data.map((item, i) => (
                                         <tr key={i}>
-                                            <td>{item.camperName}</td>
+                                            <td className = "">{item.camperName}</td>
                                             <td>{item.medicationName}</td>
                                             <td>{item.dosage} {item.dosageUnit}</td>
                                             
