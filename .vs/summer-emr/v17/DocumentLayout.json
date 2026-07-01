@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "src\\pages\\reports.jsx",
               "ToolTip": "C:\\Users\\jgold\\summer-emr\\src\\pages\\reports.jsx",
               "RelativeToolTip": "src\\pages\\reports.jsx",
-              "ViewState": "AgIAAHwAAAAAAAAAAAAAAIgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAAAIcAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
               "WhenOpened": "2026-07-01T03:39:44.248Z",
               "EditorCaption": ""
@@ -49,7 +49,7 @@
               "RelativeDocumentMoniker": "src\\pages\\mar.jsx",
               "ToolTip": "C:\\Users\\jgold\\summer-emr\\src\\pages\\mar.jsx",
               "RelativeToolTip": "src\\pages\\mar.jsx",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAEUAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAAAEEAAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
               "WhenOpened": "2026-07-01T03:36:48.894Z",
               "EditorCaption": ""
@@ -64,8 +64,7 @@
               "RelativeToolTip": "src\\pages\\campers.jsx",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAABcAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-07-01T03:35:47.743Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-01T03:35:47.743Z"
             },
             {
               "$type": "Document",
@@ -77,8 +76,7 @@
               "RelativeToolTip": "src\\pages\\home.jsx",
               "ViewState": "AgIAACQAAAAAAAAAAAAAACYAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-07-01T03:29:41.474Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-01T03:29:41.474Z"
             }
           ]
         },
