@@ -138,9 +138,9 @@ export default function Reports() {
                                 <tbody>
                                     {data.map((item, i) => (
                                         <tr key={i}>
-                                            <td className = "pl-6">{item.camperName}</td>
-                                            <td className = "pl-6">{item.medicationName}</td>
-                                            <td className = "pl-6">{item.dosage} {item.dosageUnit}</td>
+                                            <td className = "pl-50">{item.camperName}</td>
+                                            <td className = "pl-50">{item.medicationName}</td>
+                                            <td className = "pl-50">{item.dosage} {item.dosageUnit}</td>
                                             
                                         </tr>
                                     ))}
