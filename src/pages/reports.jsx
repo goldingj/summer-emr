@@ -126,7 +126,7 @@ export default function Reports() {
 
 
                         {activeReport === 'meds' && (
-                            <table className="min-w-full mt-20 divide-y divide-gray-200">
+                            <table className="min-w-full mt-10 divide-y divide-gray-200">
                                 <thead>
                                     <tr>
                                         <th>Camper</th>
