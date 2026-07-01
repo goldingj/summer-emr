@@ -80,7 +80,7 @@ export default function Reports() {
 
                     <div>
                         {activeReport === 'bunk' && (
-                            <table>
+                            <table className="min-w-full mt-10 divide-y divide-gray-200">
                                 <thead>
                                     <tr>
                                         <th>Camper</th>
@@ -91,8 +91,8 @@ export default function Reports() {
                                 <tbody>
                                     {data.map((item, i) => (
                                         <tr key={i}>
-                                            <td>{item.camperName}</td>
-                                            <td>{item.bunkName}</td>
+                                            <td className="pl-44">{item.camperName}</td>
+                                            <td className="pl-44">{item.bunkName}</td>
                                         </tr>
                                     )) }
                                 </tbody>
@@ -102,7 +102,7 @@ export default function Reports() {
 
 
                         {activeReport === 'allergies' && (
-                            <table>
+                            <table className="min-w-full mt-10 divide-y divide-gray-200">
                                 <thead>
                                     <tr>
                                         <th>Camper</th>
@@ -113,8 +113,8 @@ export default function Reports() {
                                 <tbody>
                                     {data.map((item, i) => (
                                         <tr key={i}>
-                                            <td>{item.camperName}</td>
-                                            <td>{item.allergyName}</td>
+                                            <td className="pl-44">{item.camperName}</td>
+                                            <td className="pl-44">{item.allergyName}</td>
                                         </tr>
                                     ))}
                                 </tbody>

@@ -79,15 +79,15 @@ export default function MAR() {
                             <tbody>
                                 {marItems.map(item => (
                                     <tr key={item.camperMedicationId}>
-                                        <td>{item.camperName}</td>
-                                        <td>{item.medicationName}</td>
-                                        <td>{item.dosage} {item.dosageUnit}</td>
-                                        <td>{item.frequency}</td>
+                                        <td className = "pl-20">{item.camperName}</td>
+                                        <td className = "pl-20">{item.medicationName}</td>
+                                        <td className = "pl-20">{item.dosage} {item.dosageUnit}</td>
+                                        <td className = "pl-20">{item.frequency}</td>
                                         
                                         <td>
                                             <button className= "rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500" onClick={() => handleAdminister(item.camperMedicationId)}>Administer</button>
                                         </td>
-                                        <td>{item.lastAdministered ? new Date(item.lastAdministered).toLocaleString() : "Never"}</td>
+                                        <td className = "pl-20">{item.lastAdministered ? new Date(item.lastAdministered).toLocaleString() : "Never"}</td>
                                     </tr>
                                 ))}
                             </tbody>
