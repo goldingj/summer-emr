@@ -91,8 +91,8 @@ export default function Reports() {
                                 <tbody>
                                     {data.map((item, i) => (
                                         <tr key={i}>
-                                            <td className="pl-44">{item.camperName}</td>
-                                            <td className="pl-44">{item.bunkName}</td>
+                                            <td className="pl-55">{item.camperName}</td>
+                                            <td className="pl-55">{item.bunkName}</td>
                                         </tr>
                                     )) }
                                 </tbody>
@@ -113,8 +113,8 @@ export default function Reports() {
                                 <tbody>
                                     {data.map((item, i) => (
                                         <tr key={i}>
-                                            <td className="pl-44">{item.camperName}</td>
-                                            <td className="pl-44">{item.allergyName}</td>
+                                            <td className="pl-55">{item.camperName}</td>
+                                            <td className="pl-55">{item.allergyName}</td>
                                         </tr>
                                     ))}
                                 </tbody>
