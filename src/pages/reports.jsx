@@ -127,7 +127,7 @@ export default function Reports() {
 
                         {activeReport === 'meds' && (
                             <table className="min-w-full divide-y divide-gray-200">
-                                <thead>
+                                <thead className = "marginTop-20">
                                     <tr>
                                         <th>Camper</th>
                                         <th>Medications</th>
@@ -138,9 +138,9 @@ export default function Reports() {
                                 <tbody>
                                     {data.map((item, i) => (
                                         <tr key={i}>
-                                            <td className = "pl-50">{item.camperName}</td>
-                                            <td className = "pl-50">{item.medicationName}</td>
-                                            <td className = "pl-50">{item.dosage} {item.dosageUnit}</td>
+                                            <td className = "pl-44">{item.camperName}</td>
+                                            <td className = "pl-44">{item.medicationName}</td>
+                                            <td className = "pl-44">{item.dosage} {item.dosageUnit}</td>
                                             
                                         </tr>
                                     ))}
